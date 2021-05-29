@@ -74,7 +74,7 @@ export default Login;
 
 const SignInButton = styled.button`
     margin-top:50px;
-    background-color:#0a8d48;
+    background-color: #EDB818;
     color:white;
     border:none;
     height:40px;

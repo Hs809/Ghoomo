@@ -97,3 +97,7 @@ footer > p:hover {
   display: flex;
   justify-content: center;
 }
+
+#arrow{
+  width: 50px;
+}

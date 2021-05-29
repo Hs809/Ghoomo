@@ -66,5 +66,8 @@ const Navba = styled.nav`
       opacity: 1;
     }
   }
+  .btn{
+    background:#EDB818;
+  }
 
 `

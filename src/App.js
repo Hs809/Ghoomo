@@ -14,7 +14,7 @@ import {auth,provider} from './Firebase'
 import Community from './components/Community';
 import EasyQuiz from './components/EasyQuiz';
 import MediumQuiz from './components/MediumQuiz';
-
+import Infomation  from './components/Infomation';
 
 
 
@@ -102,7 +102,7 @@ function App() {
       
     
 
-      fire.database().ref("culture").on("value", snapshot => {
+      fire.database().ref("culture1").on("value", snapshot => {
         let studentlist = [];
         snapshot.forEach(snap => {
             // snap.val() is the dictionary with all your keys/values from the 'students-list' path
@@ -152,6 +152,9 @@ function App() {
         <Switch> 
                 <Route exact  path = "/search" >
                   <SearchBar culture = {culture} />
+                  </Route>  
+                  <Route exact  path = "/information" >
+                   <Infomation culture = {culture} />
                   </Route>  
                 <Route exact path = "/quiz">
                   <Quiz />

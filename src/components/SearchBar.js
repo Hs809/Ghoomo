@@ -12,13 +12,14 @@ function SearchBar({culture}) {
   
     const refreshPage = ()=>{
       window.location.reload();
+      document.getElementById('mybutton').style.display = "none"  
+      
    }
    function videoplay() {
     var video = document.getElementById("myVideo");
     video.onplay()
    }
  
-
   
   
   return (
@@ -26,7 +27,7 @@ function SearchBar({culture}) {
       <video  autoPlay loop id="myVideo" onLoad = {videoplay}>
       <source src="assets/Confetti - 61014.mp4" type="video/mp4" />
     </video>
-      <button onClick = {refreshPage}>Click me For the Surprize</button>
+      <button onClick = {refreshPage} id="mybutton">Click me For the Surprize</button>
       <div id="map"></div>
       
       

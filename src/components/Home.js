@@ -20,22 +20,22 @@ function Home({culture}) {
         <Container>
       <HeroSection />
       <div className="container">
-        <Link to = "/search">
+        <Link to = "/information">
         <img src="/assets/svg/auto_stories_purple_24dp.svg" alt="" />
         </Link>
         <p>Learn about different places</p>
-        <div ></div>
+        <img id="arrow" src="/assets/svg/bottom-design.svg" alt="" />
       </div>
       <ImageSlider culture = {culture} />
 
    
       
       <div className="container">
-        <Link to = "/search">
+        <Link to = "">
         <img src="/assets/svg/rule_purple_24dp.svg" alt="" />
         </Link>
         <p>Test Your Knowledge with skills</p>
-        <div ></div>
+        <img id= "arrow" src="/assets/svg/bottom-design.svg" alt="" />
       </div>
       <QuizContainer>
         <div className="wrapper">
@@ -69,9 +69,12 @@ function Home({culture}) {
         </div>
       </QuizContainer>
 
+
         <Link to = "/search">
         <button className="button">
-        Click here to see something awesome!
+          <img src="/assets/svg/auto_awesome_white_24dp.svg" alt="" />
+          <p> Click here to see something awesome!</p>
+          <img  src="/assets/svg/auto_awesome_white_24dp-1.svg" alt="" />
         </button>
         </Link>
         
@@ -86,18 +89,30 @@ export default Home
 const Container = styled.div`
   overflow-x:hidden;
   .button{
-    width:400px;
-    margin:40px;
-    margin-top:50px;
-    background-color:#0a8d48;
-    color:white;
-    border:none;
-    height:40px;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:15px;
-    padding:10px 30px;
-
+    margin:auto;
+    margin-bottom:101px;
+    margin-top:101px;
+    width: 352px;
+    height: 105px;
+    background: #EDB818 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 8px;
+    opacity: 1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    p{
+      width: 238px;
+      height: 62px;
+      text-align: center;
+      font: normal normal normal 24px/31px Monarcha;
+      letter-spacing: 0px;
+      color: #F2F5F7;
+      opacity: 1;
+    }
+    .container > img{
+      width: 50px;
+    }
 
   }
 

@@ -50,7 +50,7 @@ function Detail({culture}) {
             alt=""
           />
           <img
-            src={detailData && detailData.img1}
+            src={detailData && detailData.img4}
           />
         </div>
       </ImageWrapper2>
