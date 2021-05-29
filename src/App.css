@@ -1,0 +1,99 @@
+body{
+  scroll-behavior: smooth;
+  transition: all 0.5s;
+}
+.App{
+  overflow-y: hidden;
+}
+.jumbotron{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.button{
+  padding: 10px;
+  margin-left: 19px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.btn{
+  padding: 5px 30px;
+  border: none;
+}
+.button .btnse {
+  font-size: 26px;
+}
+
+footer {
+  background-color: grey;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: aliceblue;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+footer > p:hover {
+  color: black ;
+  transition: all 0.5s;
+}
+
+.navbar {
+  height: 80px;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.links ul li {
+  margin-right: 3rem;
+}
+.links ul li a {
+  font-size: 18px;
+}
+.btn{
+  font-size: 18px;
+}
+.form{
+  margin-right: 3rem;
+}
+.leader{
+  margin-right: 0;
+}
+.table {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid gray;
+  border-radius: 5px;
+  border-collapse: inherit;
+}
+.image{
+  width: 50px;
+  margin-right:50px;
+  border-radius: 50%;
+}
+.table td {
+  border: none;
+}
+.table thead{
+  font-size: 25px;
+}
+.column {
+  display: flex;
+  justify-content: center;
+}
