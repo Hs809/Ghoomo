@@ -20,16 +20,23 @@ function Home({culture}) {
         <Container>
       <HeroSection />
       <div className="container">
+        <Link to = "/search">
         <img src="/assets/svg/auto_stories_purple_24dp.svg" alt="" />
+        </Link>
         <p>Learn about different places</p>
         <div ></div>
       </div>
-      <div id="react_container"></div>
+      <ImageSlider culture = {culture} />
+
    
-
       
-
-      <Button btnName = "Quiz"  id = "quiz"/>
+      <div className="container">
+        <Link to = "/search">
+        <img src="/assets/svg/rule_purple_24dp.svg" alt="" />
+        </Link>
+        <p>Test Your Knowledge with skills</p>
+        <div ></div>
+      </div>
       <QuizContainer>
         <div className="wrapper">
           <Link to = "/easy">
@@ -46,14 +53,14 @@ function Home({culture}) {
             </div>
           </Link>
 
-          <Link >
+          <Link to = "/hard">
           <div className="quizcontainer">
               <img src="/assets/hard.png" alt="" />
               <h2>Hard</h2>
             </div>
           </Link>
 
-          <Link >
+          <Link to = "/random" >
           <div className="quizcontainer">
               <img src="/assets/random.png" alt="" />
               <h2>Random</h2>
@@ -62,9 +69,13 @@ function Home({culture}) {
         </div>
       </QuizContainer>
 
-    
-      <Button btnName = "Community"  id = "community"/>
-       <ImageSlider culture = {culture}  />
+        <Link to = "/search">
+        <button className="button">
+        Click here to see something awesome!
+        </button>
+        </Link>
+        
+  
       
         </Container>
     )
@@ -73,6 +84,22 @@ function Home({culture}) {
 export default Home
 
 const Container = styled.div`
+  overflow-x:hidden;
+  .button{
+    width:400px;
+    margin:40px;
+    margin-top:50px;
+    background-color:#0a8d48;
+    color:white;
+    border:none;
+    height:40px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:15px;
+    padding:10px 30px;
+
+
+  }
 
   .container{
     display:flex;
