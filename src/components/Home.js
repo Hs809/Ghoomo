@@ -110,13 +110,12 @@ const Container = styled.div`
       color: #F2F5F7;
       opacity: 1;
     }
-    .container > img{
-      width: 50px;
-    }
+    
 
   }
 
   .container{
+    margin-top:50px;
     display:flex;
     justify-content:center;
     align-items:center;

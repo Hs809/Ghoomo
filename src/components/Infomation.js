@@ -20,7 +20,7 @@ function Infomation({culture}) {
                   <Wrap key = {key}>
                  
                   <Link to = {`/detail/` + data.id}>
-                    <button>{data.title}</button>
+                    <button><p>{data.title}</p></button>
                   </Link>
                 </Wrap>
                     
@@ -40,6 +40,7 @@ const Container = styled.div`
     justify-content:center;
     align-items:center;
     flex-direction:column;
+    margin-bottom:50px;
     }
 
 
@@ -48,4 +49,33 @@ const Container = styled.div`
     }
 
 `
-const Wrap = styled.div``
+const Wrap = styled.div`
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    p{
+        text-align: center;
+        font: normal normal normal 18px/21px Arial;
+        letter-spacing: 0px;
+        color: #4E4E4E;
+        opacity: 1;
+    }
+    button:nth-child(odd){
+        width: 350px;
+    height: 61px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #B62152;
+    border-radius: 8px;
+    opacity: 1;
+    margin:19px;
+    }
+    button:nth-child(even)){
+        width: 350px;
+        height: 61px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #B62152;
+        border-radius: 8px;
+        opacity: 1;
+    }
+
+`

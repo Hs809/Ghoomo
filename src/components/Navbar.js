@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const Navbar = ({handleSignOut, logout}) => {
   return (  
@@ -31,21 +32,14 @@ const Navbar = ({handleSignOut, logout}) => {
               Quiz
             </a>
           </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#community">
-              Community
-            </a>
-          </li>
-          <li className="nav-item leader">
-            <a className="nav-link" href="#leaderboard">
-              Leader Board
-            </a>
-          </li>
         </ul>
         <form className="form-inline my-2 my-lg-0 form">
+          <Link>
           <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick = {handleSignOut} onClick = {logout}>
-            Sign Out
+            <p>Surprize!</p>
           </button>
+          </Link>
+          
         </form>
       </div>
     </Navba>
@@ -67,7 +61,22 @@ const Navba = styled.nav`
     }
   }
   .btn{
-    background:#EDB818;
+    width: 162px;
+    height: 54px;
+    background: #EDB818 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 8px;
+    opacity: 1;
+  }
+  p{
+    width: 72px;
+    height: 20px;
+    text-align: center;
+    font: normal normal normal 18px/21px Arial;
+    letter-spacing: 0px;
+    color: #F2F5F7;
+    opacity: 1;
+    margin: auto;
   }
 
 `

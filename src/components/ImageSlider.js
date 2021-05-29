@@ -13,9 +13,9 @@ const ImgSlider = ({culture}) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
   };
   return (
     <Carousel {...settings}>
@@ -25,7 +25,10 @@ const ImgSlider = ({culture}) => {
                   <Wrap key = {key}>
                  
                   <Link to = {`/detail/` + data.id}>
-                    <img src={data.img1} alt="" />
+                    <div className="slidercontainer">
+                      <img src={data.img1} alt="" />
+                      <p>{data.title}</p>
+                    </div>
                   </Link>
                 </Wrap>
                     
@@ -44,26 +47,40 @@ const Carousel = styled(Slider)`
     overflow-y:hidden;
     overflow-x:hidden;
   & > button {
-    opacity: 0;
+    opacity: 1;
     height: 100%;
     width: 5vw;
     z-index: 1;
+    background: #B62152 0% 0% no-repeat padding-box;
+    opacity: 0.5;
+    width: 47px;
+  height: 286px;
 
-    &:hover {
-      opacity: 1;
-      transition: opacity 0.2s ease 0s;
+    &:hover{
+      opacity:0.5;
+      background: #B62152 0% 0% no-repeat padding-box;
     }
+    &:active{
+      opacity:0.5;
+      background: #B62152 0% 0% no-repeat padding-box;
+    }
+    &:focus{
+      opacity:0.5;
+      background: #B62152 0% 0% no-repeat padding-box;
+    }
+    
   }
 
   ul li button {
     &:before {
       font-size: 10px;
-      color: rgb(150, 158, 171);
+      color: rgb(0,0,0);
     }
   }
 
   li.slick-active button:before {
-    color: white;
+    color: black;
+
   }
 
   .slick-list {
@@ -71,11 +88,11 @@ const Carousel = styled(Slider)`
   }
 
   .slick-prev {
-    left: -75px;
+    left: 0px;
   }
 
   .slick-next {
-    right: -75px;
+    right: 0px;
   }
 `;
 
@@ -84,24 +101,36 @@ const Wrap = styled.div`
   cursor: pointer;
   position: relative;
 
-  a {
-    border-radius: 4px;
-    cursor: pointer;
-    display: block;
-    position: relative;
-    padding: 4px;
-
+  .slidercontainer {
+    overflow:hidden;
+    width: 257px;
+    height: 284px;
+    border: none;
+    border-radius: 8px 8px 0px 0px;
+    opacity: 1;
+    box-shadow: 0px 3px 6px #EDB818;
+   
     img {
       width: 100%;
-      height: 100%;
+      height: 80%;
+      
     }
-
-    &:hover {
-      padding: 0;
-      border: 4px solid rgba(103, 128, 159, 1);
-      transition-duration: 300ms;
+    p{
+      width: 42px;
+      height: 20px;
+      margin:auto;
+      font: normal normal normal 18px/21px Arial;
+      letter-spacing: 0px;
+      color: #4C0C43;
+      opacity: 1;
     }
   }
+  
+
+    
+
+
+
 `;
 
 export default ImgSlider;

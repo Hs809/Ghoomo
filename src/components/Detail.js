@@ -14,7 +14,7 @@ function Detail({culture}) {
 
 
   useEffect(() => {
-    fire.database().ref("culture").on("value", snapshot => {
+    fire.database().ref("culture1").on("value", snapshot => {
       snapshot.forEach(snap => {
           // snap.val() is the dictionary with all your keys/values from the 'students-list' path
           if(snap.val().id == id){
@@ -33,10 +33,10 @@ function Detail({culture}) {
 
   return (
     <Container>
-      <Heading>{detailData && detailData.title}</Heading>
       <ImageWrapper1>
         <HeroImage src={detailData && detailData.img1} />
       </ImageWrapper1>
+        <h1>{detailData && detailData.title}</h1>
       <ImageWrapper2>
         <div className="img1">
           <img
@@ -75,19 +75,30 @@ function Detail({culture}) {
 export default Detail;
 
 const Container = styled.div`
+  overflow-x:hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  h1{
+    margin-top:40px;
+    width: 289px;
+    height: 62px;
+    text-align: left;
+    font: normal normal normal 48px/62px Monarcha;
+    letter-spacing: 0px;
+    color: #4C0C43;
+    opacity: 1;
+  }
 `;
 
-const Heading = styled.h1`
-  font-size: 30px;
-  font-weight: 600;
-`;
+
+
+
 const ImageWrapper1 = styled.div`
-  width: 100%;
-  height: 450px;
+    width: 1366px;
+    height: 496px;
+  
 `;
 const HeroImage = styled.img`
   width: 100%;
@@ -104,9 +115,9 @@ const ImageWrapper2 = styled.div`
     justify-content: center;
     align-items: center;
     margin-left: auto;
-
-    width: 600px;
-    height: 500px;
+    width: 812px;
+    height: 450px;
+    margin-left:139px;
     img {
       width: 100%;
       height: 100%;
@@ -119,14 +130,14 @@ const ImageWrapper2 = styled.div`
     margin-left: auto;
     flex-direction: column;
     margin: 0;
-    img:nth-child(1) {
-      width: 290px;
-      height: 250px;
+    position: relative;
+    right: 30px;
+    img{
+      width: 260px;
+      height: 219px;
+      margin-bottom:13px;
     }
-    img:nth-child(2) {
-      width: 290px;
-      height: 250px;
-    }
+    
   }
 `;
 
@@ -135,25 +146,44 @@ const Info = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
-  background: #424242;
+  width: 1366px;
+  height: 179px;
+  background: #B62152 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  opacity: 1;
+  h3{
+    width: 130px;
+  height: 42px;
+  text-align: left;
+  font: normal normal normal 32px/42px Monarcha;
+  letter-spacing: 0px;
+  color: #E2E2E2;
+  opacity: 1;
+  }
   div {
-    height: 100px;
-    width: 2px;
-    background: blue;
-    position: absolute;
+    width: 0px;
+  height: 109px;
+  border: 3px solid #FFFFFF;
+  opacity: 1;
   }
   .one {
     position: absolute;
-    left: 10px;
+    top: 1246px;
+    left: 139px;
   }
   .two {
     position: absolute;
-    right: 10px;
+    top: 1246px;
+    left: 1227px;
   }
   p {
-    color: white;
-    text-align: center;
+    width: 904px;
+  height: 74px;
+  text-align: center;
+  font: normal normal normal 18px/28px Arial;
+  letter-spacing: 0px;
+  color: #E2E2E2;
+  opacity: 1;
   }
 `;
 const About = styled.div`
@@ -162,5 +192,22 @@ const About = styled.div`
   align-items:center;
   flex-direction:column;
   padding:5rem; 
-  
+  h3{
+    width: 121px;
+    height: 55px;
+    text-align: left;
+    font: normal normal normal 42px/55px Monarcha;
+    letter-spacing: 0px;
+    color: #4C0C43;
+    opacity: 1;
+  }
+  p{
+    width: 1167px;
+    height: 442px;
+    text-align: left;
+    font: normal normal normal 24px/28px Arial;
+    letter-spacing: 0px;
+    color: #424B5A;
+    opacity: 1;
+  }
 `

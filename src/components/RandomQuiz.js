@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function MediumQuiz() {
+function RandomQuiz() {
     const check = (event) => {
         var c = 0
         var q1 = document.quiz.question1.value
@@ -16,21 +16,21 @@ function MediumQuiz() {
         var q10 = document.quiz.question10.value
         var results = document.getElementById('results')
         var quiz = document.getElementById('quiz')
-        if(q1 == "img2")
+        if(q1 == "goldentemple")
             c++
-        if(q2 == "15"){
-            c++
-        }
-        if(q3 == 'Onam'){
+        if(q2 == "29 states, 7 union territories"){
             c++
         }
-        if(q4 == "Buddhism"){
+        if(q3 == 'Rangoli'){
             c++
         }
-        if(q5 == "img8"){
+        if(q4 == "North of the Equator"){
+            c++
+        }
+        if(q5 == "img6"){
             c++         
         }
-        if(q6 == "Assam"){
+        if(q6 == "Jawaharlal Nehru and MK Gandhi"){
             c++
         }
         if(q7 == "Urdu"){
@@ -42,7 +42,7 @@ function MediumQuiz() {
         if(q9 == "Tabla"){
             c++
         }
-        if(q10 == "Rabindranath Tagore"){
+        if(q10 == "None"){
             c++
         }
             quiz.style.display = "none"
@@ -51,6 +51,7 @@ function MediumQuiz() {
             document.getElementById('results').style.display = "flex"
             document.getElementById('myVideo').style.display = "flex"
 
+
     }
     function videoplay() {
         var video = document.getElementById("myVideo");
@@ -58,59 +59,59 @@ function MediumQuiz() {
        }
     return (
         <Container>
-        <form  name="quiz" id="quiz">
+            <form  name="quiz" id="quiz">
             <div>
-                <p>1. 	Which of the following is the national flower of India?</p>
+                    <p>1. 	Which of the following places is known as The Golden Temple?</p>
+                    <div className="ans">
+                    <p className="images"><input type="radio" name = "question1" value = "moontemple"/> <img src="/assets/img1.jpg" alt="" /> A. </p>
+                    <p className="images"><input type="radio" name = "question1" value = "suntemple"/> <img src="/assets/img2.jpg" /> B. </p>
+                    <p className="images"><input type="radio" name = "question1" value = "goldentemple"/> <img src="/assets/img3.jpg" /> C. </p>
+                    <p className="images"><input type="radio" name = "question1" value = "yelowtemple"/> <img src="/assets/img4.jpg" /> D. </p>
+                    </div>
+                </div>
+                <div>
+                    <p>2.	What is the number of states and union territories in India?</p>
+                    <div className="ans textans">
+                        <p className = "text"><input type="radio" name="question2" value="28 states, 7 union territories" />A.28 states, 7 union territories</p>
+                        <p className = "text"><input type="radio" name="question2" value="29 states, 8 union territories" />B. 29 states, 8 union territories </p>
+                        <p className = "text"><input type="radio" name="question2" value="28 states, 8 union territories" />C.	28 states, 8 union territories </p>
+                        <p className = "text"><input type="radio" name="question2" value="29 states, 7 union territories" />D. 29 states, 7 union territories</p>
+                    </div>
+                </div>
+                <div>
+                    <p>3.	This art form is popularly known as- <img src="/assets/img5.jpg" alt="" /></p>
+                    <div className="ans textans">
+                        <p className = "text"><input type="radio" name="question3" value="Rangoli" />A.Rangoli     </p>
+                        <p className = "text"><input type="radio" name="question3" value="Mehndi" />B. Mehndi </p>
+                        <p className = "text"><input type="radio" name="question3" value="Mandala" />C.	Mandala   </p>
+                        <p className = "text"><input type="radio" name="question3" value="Dry Paint" />D. Dry Paint</p>
+                    </div>
+                </div>
+                <div>
+                <p>4.	The southernmost point of peninsular India i.e. Kanyakumari is situated-</p>
+                <div className="ans textans">
+                    <p className = "text"><input type="radio" name="question4" value="North of Tropic of Cancer" />A.North of Tropic of Cancer</p>
+                    <p className = "text"><input type="radio" name="question4" value="South of the Equator" />B. South of the Equator </p>
+                    <p className = "text"><input type="radio" name="question4" value="South of the Tropic of Capricorn" />C.North of the EquatorSouth of the Tropic of Capricorn </p>
+                    <p className = "text"><input type="radio" name="question4" value="North of the Equator" />D.North of the Equator</p>
+                </div>
+            </div>
+            <div>
+                <p>5. 	Which one is the National Tree of India?</p>
                 <div className="ans">
-                <p className="images"><input type="radio" name = "question1" value = "img1"/> <img src="/assets/medium/img1.jpg" alt="" /> A. </p>
-                <p className="images"><input type="radio" name = "question1" value = "img2"/> <img src="/assets/medium/img2.jpg" /> B. </p>
-                <p className="images"><input type="radio" name = "question1" value = "img3"/> <img src="/assets/medium/img3.jpg" /> C. </p>
-                <p className="images"><input type="radio" name = "question1" value = "img4"/> <img src="/assets/medium/img4.jpg" /> D. </p>
+                <p className="images"><input type="radio" name = "question5" value = "img6"/> <img src="/assets/Hard/img6.jpg" alt="" /> A. </p>
+                <p className="images"><input type="radio" name = "question5" value = "img7"/> <img src="/assets/Hard/img7.jpg" /> B. </p>
+                <p className="images"><input type="radio" name = "question5" value = "img8"/> <img src="/assets/Hard/img8.jpg" /> C. </p>
+                <p className="images"><input type="radio" name = "question5" value = "img9"/> <img src="/assets/Hard/img9.jpg" /> D. </p>
                 </div>
             </div>
             <div>
-                <p>2.   The number of major languages recognized in the Indian Union as official language are-</p>
+                <p>6.The personalities visible in this photograph are- <img src="/assets/Hard/img10.jpg" alt="" /></p>
                 <div className="ans textans">
-                    <p className = "text"><input type="radio" name="question2" value="15" />A.15</p>
-                    <p className = "text"><input type="radio" name="question2" value="22" />B. 22 </p>
-                    <p className = "text"><input type="radio" name="question2" value="12" />C.	12 </p>
-                    <p className = "text"><input type="radio" name="question2" value="9" />D.9</p>
-                </div>
-            </div>
-            <div>
-                <p>3.Which Indian festival is celebrated with boat races? <img src="/assets/medium/img5.jpg" alt="" /></p>
-                <div className="ans textans">
-                    <p className = "text"><input type="radio" name="question3" value="Onam" />A.Onam     </p>
-                    <p className = "text"><input type="radio" name="question3" value="Bihu" />B. Bihu </p>
-                    <p className = "text"><input type="radio" name="question3" value="Navratri" />C.	Navratri  </p>
-                    <p className = "text"><input type="radio" name="question3" value="Pongal" />D. Pongal</p>
-                </div>
-            </div>
-            <div>
-                <p>4.	Jataka tales are associated with which religion?</p>
-                <div className="ans textans">
-                    <p className = "text"><input type="radio" name="question4" value="Hindusim" />A.Hindusim</p>
-                    <p className = "text"><input type="radio" name="question4" value="Buddhism" />B. Buddhism </p>
-                    <p className = "text"><input type="radio" name="question4" value="Jainism" />C.	Jainism </p>
-                    <p className = "text"><input type="radio" name="question4" value="Neem Tree" />D.Islam</p>
-                </div>
-            </div>
-            <div>
-                <p>5. 	Which of the following is an image of the Konark Sun temple which is situated in Puri?</p>
-                <div className="ans">
-                <p className="images"><input type="radio" name = "question5" value = "img6"/> <img src="/assets/medium/img6.jpg" alt="" /> A. </p>
-                <p className="images"><input type="radio" name = "question5" value = "img7"/> <img src="/assets/medium/img7.jpg" /> B. </p>
-                <p className="images"><input type="radio" name = "question5" value = "img8"/> <img src="/assets/medium/img8.jpg" /> C. </p>
-                <p className="images"><input type="radio" name = "question5" value = "img9"/> <img src="/assets/medium/img9.jpg" /> D. </p>
-                </div>
-            </div>
-            <div>
-                <p>6.This traditional attire is popular in which state? <img src="/assets/medium/img10.jpg" alt="" /></p>
-                <div className="ans textans">
-                    <p className = "text"><input type="radio" name="question6" value="Assam" />A.Assam     </p>
-                    <p className = "text"><input type="radio" name="question6" value="Delhi" />B. Delhi </p>
-                    <p className = "text"><input type="radio" name="question6" value="Gujrat" />C.	Gujrat    </p>
-                    <p className = "text"><input type="radio" name="question6" value="Karnataka" />D.  Karnataka</p>
+                    <p className = "text"><input type="radio" name="question6" value="Rajendra Prasad and MK Gandhi" />A. Rajendra Prasad and MK Gandhi     </p>
+                    <p className = "text"><input type="radio" name="question6" value="Jawaharlal Nehru and MK Gandhi" />B. Jawaharlal Nehru and MK Gandhi </p>
+                    <p className = "text"><input type="radio" name="question6" value="Bhagat Singh and MK Gandhi	" />C.	Bhagat Singh and MK Gandhi	    </p>
+                    <p className = "text"><input type="radio" name="question6" value="Jawaharlal Nehru and Rajendra Prasad" />D.  Jawaharlal Nehru and Rajendra Prasad</p>
                 </div>
             </div>
             <div>
@@ -124,7 +125,7 @@ function MediumQuiz() {
             </div>
             <div>
                 <p>8. Which of the following is a picture of a vehicle popularly known as Tuk-tuk?</p>
-                <div className="ans textans">
+                <div className="ans">
                 <p className="images"><input type="radio" name = "question8" value = "img11"/> <img src="/assets/medium/img11.jpg" alt="" /> A. </p>
                 <p className="images"><input type="radio" name = "question8" value = "img12"/> <img src="/assets/medium/img12.jpg" /> B. </p>
                 <p className="images"><input type="radio" name = "question8" value = "img13"/> <img src="/assets/medium/img13.jpg" /> C. </p>
@@ -141,30 +142,25 @@ function MediumQuiz() {
                 </div>
             </div>
             <div>
-                <p>10. This is a self-portrait of which artist? <img src="/assets/medium/img16.jpg" alt="" /></p>
-                <div className="ans textans">
-                    <p className = "text"><input type="radio" name="question10" value="M.F.Husain" />A.	M.F. Husain</p>
-                    <p className = "text"><input type="radio" name="question10" value=" Rabindranath Tagore" />B. Rabindranath Tagore  </p>
-                    <p className = "text"><input type="radio" name="question10" value="Raja Ravi Varma" />C.Raja Ravi Varma   </p>
-                    <p className = "text"><input type="radio" name="question10" value="S.H. Raza" />D. S.H. Raza</p>
+                    <p>10.	Gautama Buddha attained enlightenment while meditating underneath which tree?</p>
+                    <div className="ans textans">
+                        <p className = "text"><input type="radio" name="question10" value="Sanskrit" />A.	Sanskrit</p>
+                        <p className = "text"><input type="radio" name="question10" value="Hindi" />B. Hindi </p>
+                        <p className = "text"><input type="radio" name="question10" value="Tamil" />C.Tamil</p>
+                        <p className = "text"><input type="radio" name="question10" value="None" />D. None</p>
+                    </div>
                 </div>
-            </div>
-           
-
-            
-
-            <input type="submit" className = "submitbtn" name="" value="Submit" onClick = {(e) => {check(e)}} />
-        </form>
-        <p id="results"></p>
-        <video  autoPlay loop id="myVideo" onLoad = {videoplay}>
-            <source src="assets/Confetti - 61014.mp4" type="video/mp4" />
-        </video>
-    </Container>
+                <input type="submit" name="" className="submitbtn" value="I'm DOne" onClick = {(e) => {check(e)}} />
+                </form>
+                <p id="results"></p>
+                <video  autoPlay loop id="myVideo" onLoad = {videoplay}>
+                    <source src="assets/Confetti - 61014.mp4" type="video/mp4" />
+                </video>
+        </Container>
     )
-} 
+}
 
-export default MediumQuiz
-
+export default RandomQuiz
 const Container = styled.div`
 overflow-x:hidden;
     img{
@@ -325,3 +321,4 @@ overflow-x:hidden;
         display:none;
       }
 `
+

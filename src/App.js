@@ -15,6 +15,8 @@ import Community from './components/Community';
 import EasyQuiz from './components/EasyQuiz';
 import MediumQuiz from './components/MediumQuiz';
 import Infomation  from './components/Infomation';
+import HardQuiz from './components/HardQuiz';
+import RandomQuiz from './components/RandomQuiz';
 
 
 
@@ -173,6 +175,12 @@ function App() {
                 </Route>
                 <Route exact path = "/medium">
                    <MediumQuiz />
+                </Route>
+                <Route exact path = "/hard">
+                   <HardQuiz />
+                </Route>
+                <Route exact path = "/random">
+                   <RandomQuiz />
                 </Route>
           </Switch>
           <Footer />
